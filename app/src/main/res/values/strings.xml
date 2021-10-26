@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProyectoSQLite</string>
+
+    <string name="prompt_previsiones">Elige una Previsión...</string>
+    <string-array name="array_previsiones">
+        <item>Fonasa</item>
+        <item>Banmédica</item>
+        <item>Cruz Blanca</item>
+        <item>Consalud</item>
+        <item>Colmena</item>
+    </string-array>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Lista medicamentos"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#5C6BC0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_agregar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="95dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="47dp"
+        android:background="#7C7C7C"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Nombre"
+        app:layout_constraintBottom_toTopOf="@+id/listaProductos"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="97dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="36dp"
+        android:background="#7C7C7C"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Cantidad"
+        app:layout_constraintBottom_toTopOf="@+id/listaProductos"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/btn_agregar" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="95dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="47dp"
+        android:background="#7C7C7C"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Codigo"
+        app:layout_constraintBottom_toTopOf="@+id/listaProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="95dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="47dp"
+        android:background="#7C7C7C"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Precio"
+        app:layout_constraintBottom_toTopOf="@+id/listaProductos"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:clickable="true"
+        android:onClick="cambiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ListView
+        android:id="@+id/listaProductos"
+        android:layout_width="388dp"
+        android:layout_height="599dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="16dp"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:listitem="@layout/item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

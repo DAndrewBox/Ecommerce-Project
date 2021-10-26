@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"><![CDATA[>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Editar Producto"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#5C6BC0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/inp_cantidad_det"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/inp_precio_det"
+        app:layout_constraintTop_toBottomOf="@+id/inp_precio_det" />
+
+    <TextView
+        android:id="@+id/txt_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Cantidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inp_cantidad_det" />
+
+    <EditText
+        android:id="@+id/inp_precio_det"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/inp_nombre_det"
+        app:layout_constraintTop_toBottomOf="@+id/inp_nombre_det" />
+
+    <TextView
+        android:id="@+id/txt_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="45dp"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_codigo" />
+
+    <TextView
+        android:id="@+id/txt_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Precio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inp_precio_det" />
+
+    <EditText
+        android:id="@+id/inp_nombre_det"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_nombre"
+        app:layout_constraintStart_toEndOf="@+id/txt_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+    <TextView
+        android:id="@+id/txt_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:text="Codigo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton3" />
+
+    <TextView
+        android:id="@+id/codigo_det"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="27dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Codigo"
+        app:layout_constraintBottom_toTopOf="@+id/txt_nombre"
+        app:layout_constraintEnd_toEndOf="@+id/inp_nombre_det"
+        app:layout_constraintStart_toStartOf="@+id/btn_guardar"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton3" />
+
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:onClick="guardar"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inp_cantidad_det" />
+
+    <ListView
+        android:id="@+id/listaProductos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:clickable="true"
+        android:onClick="volver"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:longClickable="false"
+        android:onClick="eliminarRegistro"
+        android:text="Eliminar Registro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_guardar"
+        tools:ignore="OnClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
